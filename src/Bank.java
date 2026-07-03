@@ -26,4 +26,17 @@ public class Bank {
             System.out.println("----------------");
         }
     }
+
+    public Account findAccount(String accountNumber) {
+
+    for (Account acc : accounts) {
+
+        if (acc.getAccountNumber().equals(accountNumber)) {
+            return acc;
+        }
+    }
+
+    return null;
+    }
+
 }

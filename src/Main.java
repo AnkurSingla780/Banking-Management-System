@@ -22,7 +22,12 @@ public class Main {
 
         bank.createAccount(acc1);
         bank.createAccount(acc2);
-
+        Account foundAccount = bank.findAccount("ACC106");
+        if (foundAccount != null) {
+            System.out.println("Account Found: " + foundAccount);
+        } else {
+            System.out.println("Account Not Found.");
+        }
         bank.displayAllAccounts();
     }
 }
