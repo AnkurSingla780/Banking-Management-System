@@ -39,4 +39,22 @@ public class Bank {
     return null;
     }
 
+    public boolean deposit(String accountNumber, double amount){
+        
+        Account acc = findAccount(accountNumber);
+        if (acc != null) {
+            return acc.deposit(amount);
+        }
+        return false;
+    }
+
+    public boolean withdraw(String accountNumber, double amount) {
+        
+        Account acc = findAccount(accountNumber);
+        if (acc != null) {
+            return acc.withdraw(amount);
+        }
+        return false;
+    }
+
 }
