@@ -126,4 +126,17 @@ public class Bank {
             System.out.println("Error loading accounts: " + e.getMessage());
         }
     }
+
+    public boolean deleteAccount(String accountNumber) {
+
+    Account acc = findAccount(accountNumber);
+
+    if (acc == null) {
+        return false;
+    }
+
+    accounts.remove(acc);
+
+    return saveAccountsToFile();
+    }
 }
